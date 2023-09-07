@@ -271,7 +271,7 @@ Parameters:
     ConstraintDescription: "The Quick Start S3 key prefix can include numbers, lowercase letters,
       uppercase letters, hyphens (-), and forward slashes (/). The prefix should
       end with a forward slash (/)."
-    Default: quickstart-hvr/
+    Default: cfn-ps-hvr/
     Description: "S3 key prefix that is used to simulate a directory for your copy of the 
       Quick Start assets. Keep the default prefix unless you are customizing 
       the template. Changing this prefix updates code references to point to 
@@ -319,7 +319,7 @@ Resources:
     Type: "AWS::CloudFormation::Stack"
     Properties:
       TemplateURL: !Sub
-          - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QSS3KeyPrefix}submodules/quickstart-aws-vpc/templates/aws-vpc.template.yaml
+          - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QSS3KeyPrefix}submodules/cfn-ps-aws-vpc/templates/aws-vpc.template.yaml
           - S3Bucket: !If
               - UsingDefaultBucket
               - !Sub "aws-quickstart-${AWS::Region}"
@@ -439,7 +439,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: !Sub
-        - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QSS3KeyPrefix}submodules/quickstart-amazon-aurora-postgresql/templates/aurora_postgres.template.yaml
+        - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QSS3KeyPrefix}submodules/cfn-ps-amazon-aurora-postgresql/templates/aurora_postgres.template.yaml
         - S3Bucket: !If
             - UsingDefaultBucket
             - !Sub "aws-quickstart-${AWS::Region}"
