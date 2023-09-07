@@ -1,5 +1,5 @@
 project:
-  name: quickstart-hvr
+  name: cfn-ps-hvr
   regions:
     - ap-southeast-2
     - us-east-1
